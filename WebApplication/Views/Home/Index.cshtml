@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/Scripts/jquery-2.1.4.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/myApp.js"></script>
+</head>
+<body>
+    <div data-ng-app="myApp" data-ng-controller="studentCtrl">
+        {{deneme}}
+        <table border="1">
+            <tr>
+                <th>Student Id</th>
+                <th>Student Name</th>
+                <th>Student Lastname</th>
+            </tr>
+            <tr data-ng-repeat="emp in Students">
+                <td>{{emp.StudentId}}</td>
+                <td>{{emp.StudentName}}</td>
+                <td>{{emp.StudentLastname}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
