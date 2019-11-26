@@ -13,12 +13,7 @@ namespace WebApplication.Controllers
         {
             return View();
         }
-        public JsonResult Getstudent()
-        {
-            DataContext db = new DataContext();
-            List<Student> Students = db.Students.ToList();
-            return Json(Students, JsonRequestBehavior.AllowGet);
-        }
+        
         public ActionResult Info()
         {
             return View();

@@ -2,7 +2,7 @@
 myApp.controller('studentCtrl', function ($scope, $http) {
 
     $scope.Students = "";
-    $http.get("/Home/Getstudent")
+    $http.get("/Json/Getstudent")
     .success(function (result) {
         $scope.Students = result;
     })

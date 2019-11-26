@@ -15,20 +15,23 @@
 </head>
 <body>
     <div data-ng-app="myApp" data-ng-controller="studentCtrl">
-        
+        <h3>Filtrele</h3>
+        <label>Ara: <input ng-model="search.$"></label><br />
+        <label>Id'ye Göre: <input ng-model="search.StudentId"></label><br />
+        <label>İsime Göre: <input ng-model="search.StudentName"></label><br />
+        <label>Soyisime Göre: <input ng-model="search.StudentLastname"></label>
         <table border="1">
             <tr>
                 <th>Student Id</th>
                 <th>Student Name</th>
                 <th>Student Lastname</th>
             </tr>
-            <tr data-ng-repeat="emp in Students">
+            <tr data-ng-repeat="emp in Students | filter:search:strict">
                 <td>{{emp.StudentId}}</td>
                 <td>{{emp.StudentName}}</td>
                 <td>{{emp.StudentLastname}}</td>
             </tr>
         </table>
-        {{result}}
     </div>
 </body>
 </html>

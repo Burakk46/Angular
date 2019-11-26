@@ -10,6 +10,12 @@ namespace WebApplication.Controllers
     public class JsonController : Controller
     {
         // GET: Json
+        public JsonResult Getstudent()
+        {
+            DataContext db = new DataContext();
+            List<Student> Students = db.Students.ToList();
+            return Json(Students, JsonRequestBehavior.AllowGet);
+        }
         public JsonResult GetNumber()
         {
             DataContext db = new DataContext();
