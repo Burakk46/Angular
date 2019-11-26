@@ -1,0 +1,35 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Info</title>
+    <script src="~/Scripts/jquery-2.1.4.js"></script>
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Scripts/myApps.js"></script>
+</head>
+<body>
+    <div data-ng-app="myApps" data-ng-controller="AppsCtrl">
+        <table border="1">
+            <tr>
+                <th>Id</th>
+                <th>İsim</th>
+                <th>Soyisim</th>          
+            </tr>
+            <tr>
+                
+                <td>{{test3}}</td>
+                <td>{{test2}}</td>
+                <td>{{test}}</td>
+                
+            </tr>
+        </table>
+        <div ng-if="test3==1">dsadsa</div>
+    </div>
+</body>
+</html>

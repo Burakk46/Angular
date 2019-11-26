@@ -5,7 +5,6 @@ myApp.controller('studentCtrl', function ($scope, $http) {
     $http.get("/Home/Getstudent")
     .success(function (result) {
         $scope.Students = result;
-        var deneme = result;
     })
     .error(function (result) {
         console.log(result);

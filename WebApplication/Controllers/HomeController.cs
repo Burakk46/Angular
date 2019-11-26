@@ -19,5 +19,10 @@ namespace WebApplication.Controllers
             List<Student> Students = db.Students.ToList();
             return Json(Students, JsonRequestBehavior.AllowGet);
         }
+        public ActionResult Info()
+        {
+            return View();
+        }
+        
     }
 }
